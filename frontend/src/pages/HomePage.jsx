@@ -1,7 +1,7 @@
 import { useEffect } from "react";
-import CategoryItem from "../components/CategoryItem";
 import { useProductStore } from "../stores/useProductStore";
 import FeaturedProducts from "../components/FeaturedProducts";
+import Category from "../components/Category.jsx";
 
 const categories = [
 	{ href: "/jeans", name: "Jeans", imageUrl: "/jeans.jpg" },
@@ -32,7 +32,7 @@ const HomePage = () => {
 
 				<div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4'>
 					{categories.map((category) => (
-						<CategoryItem category={category} key={category.name} />
+						<Category category={category} key={category.name}/>
 					))}
 				</div>
 
